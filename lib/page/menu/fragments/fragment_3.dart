@@ -18,6 +18,7 @@ import '../../../resource/widgets/DatePicker.dart';
 import '../../../resource/widgets/Dropdown.dart';
 import '../../../resource/widgets/SwitchableButton.dart';
 import '../../../resource/widgets/Formulaire.dart';
+import 'package:flutter/services.dart';
 
 class TroisFrag extends StatefulWidget {
   const TroisFrag({Key? key}) : super(key: key);
@@ -502,6 +503,10 @@ class TroisFragPage extends State<TroisFrag> {
 
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+      DeviceOrientation.portraitDown,
+    ]);
     return MaterialApp(
       theme: ThemeApp.lightTheme,
       debugShowCheckedModeBanner: false,
@@ -517,7 +522,9 @@ class TroisFragPage extends State<TroisFrag> {
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Formulaire(value: listItemFormulaire),
+                SingleChildScrollView(
+                  child: Formulaire(value: listItemFormulaire),
+                ),
                 /*_title("Formulaire de maintenance"),
                         _takeAPicture("Photo à l’arrivée du technicien ", _imageFile),
                         _takeASign("Signature", GlobalKey()),

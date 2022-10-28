@@ -46,7 +46,7 @@ class _Formulaire extends State<Formulaire> {
               ),
               Text(
                 itemFormulaire.titlecard.toString(),
-                style: GoogleFonts.nunito(fontWeight: FontWeight.w700, fontSize: 15, color: Colors.black),
+                style: GoogleFonts.nunito(fontWeight: FontWeight.w700, fontSize: 10, color: Colors.black),
                 textAlign: TextAlign.justify,
               ),
             ],
